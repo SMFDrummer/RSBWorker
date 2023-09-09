@@ -8,4 +8,4 @@
 
 同时注意default.json需要与jar位于同一目录
 
-项目借鉴了https://github.com/Endlin-Boeingstein/EBToolBox，感谢大佬制作的软件赋予灵感
+项目借鉴了[EBToolBox](https://github.com/Endlin-Boeingstein/EBToolBox)，感谢大佬制作的软件赋予灵感
