@@ -1,0 +1,18 @@
+{
+  "PropInfo": "RSBWorkerPropertySheet",
+  "AuthorInfo": {
+    "Developer": "SMF",
+    "TestBy": [
+      "sheep",
+      "min_mozj"
+    ]
+  },
+  "PropData": {
+    "GlobalSettings": {
+      "Inter": {
+        "#DESCRIPTION#": "This value is the default execute point for program, if it's null then let user change.",
+        "value": 1
+      }
+    }
+  }
+}
