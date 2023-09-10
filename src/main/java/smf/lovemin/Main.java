@@ -1,4 +1,5 @@
 package smf.lovemin;
+import smf.lovemin.JsonUtils.ManifestTransaction;
 import smf.lovemin.JsonUtils.ResourcesVersionChanger;
 
 import java.io.IOException;
@@ -27,6 +28,7 @@ public class Main {
         Inter.setGlobalSetting();
         switch (Inter.inter) {
             case 1 -> ResourcesVersionChanger.measure();
+            case 2 -> ManifestTransaction.RunnableTransaction();
             case 0 -> System.exit(0);
             default -> {
                 System.out.println("\033[31m" + "默认值非法，无法执行已知功能，请重新设置" + "\033[0m");

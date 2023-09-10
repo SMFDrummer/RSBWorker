@@ -81,15 +81,19 @@ public class Inter {
         boolean keepRunning = true;
         System.out.println("""
                 功能列表：
-                [1] Resources.json版本切换
+                [1] Resources.json新旧版本切换
+                [2] 清单文件自适应版本切换
                 [0] 退出程序
-                请输入功能序号并按回车键继续……：
-                """);
+                请输入功能序号并按回车键继续……：""");
         while (keepRunning) {
             inter = smfScanner.smfInt(false);
             switch (inter) {
                 case 1:
-                    System.out.println("[1] Resources.json版本切换");
+                    System.out.println("[1] Resources.json新旧版本切换");
+                    keepRunning = false;
+                    break;
+                case 2:
+                    System.out.println("[2] 清单文件自适应版本切换");
                     keepRunning = false;
                     break;
                 case 0:
@@ -99,7 +103,7 @@ public class Inter {
                     System.out.println("\033[31m" + "输入无效，请重新输入功能序号：" + "\033[0m");
             }
         }
-        System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+        System.out.println("————————————————————————————————————————————————————————————————————————————");
         return inter;
     }
 }

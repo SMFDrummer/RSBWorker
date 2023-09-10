@@ -13,9 +13,11 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Iterator;
 
+import static smf.lovemin.JsonUtils.Base.getFilePath;
+
 public class ResourcesVersionChanger {
     public static void measure(){
-        String resFilePath = getFilePath();
+        String resFilePath = getFilePath("请拖入Resources.json文件，或输入路径，并按回车继续……");
         File file = new File(resFilePath);
         try {
             JSONObject parse = JSON.parseObject(Files.readString(file.toPath()));
@@ -61,15 +63,6 @@ public class ResourcesVersionChanger {
         }
     }
 
-    private static String getFilePath() {
-        System.out.println("请拖入Resources.json文件，或输入路径，并按回车继续……");
-        while (true) {
-            String filePath = smfScanner.smfString(false);
-            if (Files.exists(Paths.get(filePath))){
-                return filePath;
-            } else System.out.println("文件不存在，请重新输入");
-        }
-    }
     public static JSONObject pathChanger(JSONObject pathElement) {
         if (JSON.isValidArray(pathElement.getString("path"))) {
             JSONArray pathArray = pathElement.getJSONArray("path");
