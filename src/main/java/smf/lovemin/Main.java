@@ -22,7 +22,7 @@ public class Main {
                 default.json
                 
                 更新日志：
-                *添加功能1
+                *添加功能2
                 ————————————————————————————————————————————————————————————————————————————
                 """,version, Inter.getTestBy(), System.getProperty("user.dir"));
         Inter.setGlobalSetting();
